@@ -19,10 +19,10 @@ import android.widget.Toast;
 
 /**
  * 
- * @author James Baster <james@jarofgreen.co.uk>
- * @copyright JMB Technology Limited
+ * @author James Baster <james@jarofgreen.co.uk>, modified by Alistair MacLeod
+ * @copyright JMB Technology Limited, Alistair MacLeod
  * @license Open Source under the 3-clause BSD License
- * @url https://github.com/jarofgreen/Progress-Bar--The-Game-Android
+ * @url https://github.com/anm/Progress-Bar--The-Game-Android
  *  */
 public class GameActivity extends Activity {
 
@@ -112,6 +112,7 @@ public class GameActivity extends Activity {
 			Toast.makeText(this, msg, Toast.LENGTH_LONG).show();
 			nextLevelButton.setVisibility(View.VISIBLE);
 			levelRunning = false;
+			nextLevel(null);
 		} else {
 			handler.postDelayed(runnable, getTimeTillNextPerCent()); 
 		}
